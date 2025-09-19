@@ -14,7 +14,7 @@ from flask import Flask, request, jsonify, render_template_string # for web app
 app = Flask(__name__)
 
 # --- Exit options ---
-exit_keywords = ["exit", "quit", "bye", "goodbye", "stop"]
+exit_keywords = ["exit", "quit", "bye", "goodbye", "stop", "chao", "adios"]
 
 # --- Responses grouped by category ---
 responses = {
@@ -42,7 +42,7 @@ responses = {
 
 # --- Regex patterns for each category ---
 patterns = {
-    "services": re.compile(r"\b(service|services|offer|help|dashboard|dashboars|data|automation|forecast)\b", re.IGNORECASE),
+    "services": re.compile(r"\b(service|services|offer|help|dashboard|dashboards|data|automation|forecast)\b", re.IGNORECASE),
     "pricing": re.compile(r"\b(price|pricing|cost|charge|fee|package|afford|support)\b", re.IGNORECASE),
     "experience": re.compile(r"\b(experience|qualification|background|team|different|industry)\b", re.IGNORECASE),
     "availability": re.compile(r"\b(hour|hours|availability|open|time|respond|start|support)\b", re.IGNORECASE)
@@ -51,9 +51,12 @@ patterns = {
 # --- Helper function to get a response ---
 def get_response(user_input):
     low = user_input.lower()
+
+    # Check for exit keywords
     if any(word in low for word in exit_keywords):
         return "Thanks for stopping by! Have a great day."
 
+    # Match user input to patterns and return a random response from the matched category
     for category, pattern in patterns.items():
         if pattern.search(user_input):
             return random.choice(responses[category])
@@ -61,19 +64,20 @@ def get_response(user_input):
     return "I’m not sure about that. Could you ask about our services, pricing, experience, or availability?"
 
 
+# --- Home route serving the HTML page ---
 @app.route("/", methods=["GET"])
 def home():
-    # Dark-themed UI (copied & adapted from your example)
+    # Dark-themed UI 
     html_page = r"""
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Data Analytics Chatbot</title>
+<title>MT Data Analytics</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-  :root { --bg:#0b1020; --card:#141a32; --ink:#e8ecff; --muted:#9aa3c7; }
-  * { box-sizing:border-box; }
+<style>  
+  :root { --bg:#0b1020; --card:#141a32; --ink:#e8ecff; --muted:#9aa3c7; }  # dark theme
+  * { box-sizing:border-box; }   
   body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:var(--bg); color:var(--ink); }
   .wrap { max-width:820px; margin:0 auto; padding:24px; }
   .card { background:var(--card); border-radius:16px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
@@ -81,7 +85,7 @@ def home():
   p.subtitle { margin:0 0 16px; color:var(--muted); }
   .chat { height:56vh; overflow:auto; padding:8px; display:flex; flex-direction:column; gap:10px; border-radius:12px; background:#0f1530; border:1px solid rgba(255,255,255,.06); }
   .msg { max-width:78%; padding:10px 12px; border-radius:12px; line-height:1.35; white-space:pre-wrap; }
-  .you { align-self:flex-end; background:#3243ff; color:white; border-bottom-right-radius:4px; }
+  .you { align-self:flex-end; background:#3243ff; color:white; border-bottom-right-radius:4px; } 
   .bot { align-self:flex-start; background:#1b2242; border-bottom-left-radius:4px; }
   .meta { font-size:12px; color:var(--muted); margin-top:2px; }
   .row { display:flex; gap:8px; margin-top:12px; }
@@ -95,7 +99,7 @@ def home():
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>Data Analytics Chatbot</h1>
+      <h1>MT Data Analytics</h1> 
       <p class="subtitle">Ask me about services, pricing, experience, or availability.</p>
 
       <div id="chat" class="chat"></div>
@@ -159,7 +163,7 @@ addMsg("Hi! Welcome to our Data Analytics chatbot. Ask about services, pricing, 
     """
     return render_template_string(html_page)
 
-
+# --- Chat endpoint ---
 @app.post("/chat")
 def chat_endpoint():
     payload = request.get_json(silent=True) or {}
@@ -168,6 +172,6 @@ def chat_endpoint():
         return jsonify({"answer": "Please type a question."})
     return jsonify({"answer": get_response(user_q)})
 
-
+# Run the app
 if __name__ == "__main__":
     app.run(debug=True)
