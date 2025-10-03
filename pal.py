@@ -29,7 +29,7 @@ if len(sys.argv) != 2:      # Evaluate that the length of the arguments is 2
 
 # Get user input from command line arguments and convert to lowercase
 string_input = sys.argv[1].lower()  
-#print(f'\nChecking if "{string_input}" is a palindrome or an inexact palindrome...\n')
+
 
 # Check if the input is a palindrome or an inexact palindrome
 if is_palindrome(string_input):
