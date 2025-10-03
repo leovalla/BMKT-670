@@ -1,0 +1,201 @@
+order_id,order_date,customer_name,state,product,qty,price_usd,coupon_code,ship_date
+2000,2025-08-04,gina torres,OR,Widget B,0,-5.0,SUMMER20,07-18-2025
+2001,07-15-2025,hank pym,OR,Widget A,3,-5.0,,2025/07/21
+2002,2025-07-23,BOB SMITH,MT,Widget A,,9.99,SUMMER20,2025/08/18
+2003,2025-07-22,gina torres,mt,Widget C,0,49.99,SUMMER10,2025-08-01
+2004,2025-08-07,frank ocean,or,Widget D,0,19.99,SUMMER20,2025-08-05
+2005,08-05-2025,hank pym,ID,Widget A,5,9.99,SUMMER20,2025/08/01
+2006,08-12-2025,  Carol Danvers ,id,Widget C,0,49.99,SUMMER20,07-24-2025
+2007,07-17-2025,gina torres,mt,Widget B,2,49.99, ,2025/08/04
+2008,2025-07-28,  Carol Danvers ,MT,Widget A,0,49.99,SUMMER10,2025-08-05
+2009,2025-07-15,wanda maximoff,Wa,Widget C,0,49.99,,2025/07/16
+2010,2025-07-21,emily davis,mt,Widget C,,49.99,,2025-07-22
+2011,07-31-2025,tony stark,id,Widget D,,9.99, ,2025-08-19
+2012,07-15-2025,wanda maximoff,mt,Widget B,,25.0,SUMMER20,2025/08/17
+2013,07-21-2025,hank pym,wa,Widget B,3,25.0,SUMMER10,2025/07/24
+2014,08-04-2025,hank pym,OR,Widget B,3,9.99,SUMMER10,2025-07-20
+2005,2025/08/01,gina torres,OR,Widget C,0,-5.0,,2025/08/08
+2016,2025/07/22,tony stark,id,Widget C,0,25.0, ,2025/07/26
+2017,2025/08/02,emily davis,wa,Widget B,2,19.99, ,08-19-2025
+2018,2025-08-09,frank ocean,or,Widget C,1,19.99, ,08-04-2025
+2019,2025-08-08,david lee,OR,Widget D,,-5.0, ,2025-08-18
+2020,2025/08/06,BOB SMITH,MT,Widget C,4,9.99,SUMMER10,08-04-2025
+2021,2025/07/25,emily davis,OR,Widget C,,19.99,SUMMER20,2025-07-22
+2022,2025-07-19,hank pym,ID,Widget A,,9.99,,2025-08-01
+2023,2025/08/14,david lee,or,Widget D,,19.99,SUMMER10,07-22-2025
+2024,2025-07-18,hank pym,ID,Widget A,2,15.49, ,2025/07/25
+2025,2025-07-27,tony stark,ID,Widget B,,-5.0, ,08-03-2025
+2026,2025/07/26,tony stark,MT,Widget B,0,-5.0,,07-29-2025
+2027,2025/08/03,gina torres,wa,Widget D,3,-5.0,SUMMER20,2025-08-06
+2028,2025-08-09,frank ocean,ID,Widget C,,9.99,SUMMER20,08-01-2025
+2029,2025/08/07,alice johnson,or,Widget A,5,49.99,SUMMER20,2025/08/16
+2005,2025-08-01,hank pym,OR,Widget D,0,-5.0, ,2025-07-19
+2031,2025/08/13,frank ocean,id,Widget A,,19.99,SUMMER10,2025/08/12
+2032,07-17-2025,  Carol Danvers ,or,Widget C,0,15.49,SUMMER10,2025-07-18
+2033,07-24-2025,hank pym,mt,Widget A,0,9.99,SUMMER20,2025-08-06
+2034,2025/08/03,david lee,OR,Widget D,0,19.99,,2025-08-01
+2035,2025-08-02,frank ocean,MT,Widget C,,49.99,SUMMER20,08-13-2025
+2036,2025-08-06,emily davis,ID,Widget C,,19.99,SUMMER20,08-12-2025
+2037,07-16-2025,frank ocean,id,Widget D,0,-5.0,,2025-07-16
+2038,2025/07/22,emily davis,ID,Widget C,4,15.49,SUMMER20,07-20-2025
+2039,2025-07-17,tony stark,MT,Widget A,0,-5.0,,07-25-2025
+2040,2025-08-11,emily davis,or,Widget B,,25.0,,2025/07/18
+2041,2025/07/27,wanda maximoff,mt,Widget D,5,-5.0,SUMMER10,2025/07/25
+2042,07-29-2025,alice johnson,OR,Widget A,2,25.0,,2025-07-24
+2043,2025/08/10,wanda maximoff,or,Widget C,5,-5.0,SUMMER20,2025/08/04
+2044,2025/07/20,david lee,mt,Widget B,0,15.49,,2025/07/18
+2005,2025-07-26,BOB SMITH,Wa,Widget A,4,15.49,SUMMER20,07-29-2025
+2046,2025/08/05,david lee,ID,Widget D,,9.99,,07-31-2025
+2047,08-06-2025,gina torres,OR,Widget C,,-5.0,SUMMER10,2025/07/22
+2048,2025-08-04,hank pym,OR,Widget D,,25.0,SUMMER20,08-11-2025
+2049,08-03-2025,wanda maximoff,mt,Widget A,,9.99,SUMMER20,2025-07-25
+2050,07-20-2025,david lee,Wa,Widget B,,19.99,SUMMER20,2025-07-26
+2051,2025-08-07,hank pym,id,Widget A,,15.49,,2025-08-11
+2052,2025/07/20,hank pym,wa,Widget A,,9.99,SUMMER10,07-27-2025
+2053,2025/07/27,hank pym,id,Widget C,,15.49,SUMMER10,2025/08/06
+2054,08-13-2025,alice johnson,OR,Widget D,2,9.99,SUMMER10,2025/07/31
+2055,08-06-2025,BOB SMITH,OR,Widget A,4,19.99,SUMMER10,07-26-2025
+2056,07-22-2025,emily davis,MT,Widget A,0,19.99,,2025/07/22
+2057,2025-07-25,david lee,mt,Widget B,0,49.99,SUMMER20,2025/07/18
+2058,2025-07-22,gina torres,Wa,Widget B,,25.0, ,2025-07-30
+2059,2025/08/09,david lee,wa,Widget D,,49.99,SUMMER10,2025/08/14
+2060,2025/07/27,emily davis,id,Widget D,0,25.0, ,2025-08-04
+2061,2025-07-17,tony stark,mt,Widget C,,19.99,,2025-07-30
+2062,08-13-2025,frank ocean,or,Widget D,0,9.99,,2025/07/28
+2063,08-12-2025,hank pym,MT,Widget B,0,-5.0, ,2025/08/06
+2064,2025-07-25,wanda maximoff,Wa,Widget D,1,15.49,SUMMER20,2025/07/20
+2065,2025/08/04,wanda maximoff,MT,Widget A,1,19.99, ,08-07-2025
+2066,07-27-2025,frank ocean,OR,Widget D,0,19.99,,2025/08/17
+2067,2025-07-29,gina torres,MT,Widget D,,9.99, ,2025/08/19
+2068,2025-07-23,wanda maximoff,wa,Widget C,0,-5.0,SUMMER10,2025-07-17
+2005,07-22-2025,frank ocean,OR,Widget A,0,19.99,SUMMER10,2025-08-01
+2070,08-01-2025,frank ocean,id,Widget C,0,19.99,SUMMER20,2025-08-01
+2071,07-23-2025,hank pym,id,Widget B,2,9.99, ,07-22-2025
+2072,2025/08/02,emily davis,or,Widget D,2,19.99, ,2025/08/12
+2073,08-12-2025,emily davis,OR,Widget D,0,25.0, ,2025/08/05
+2074,2025/07/27,emily davis,OR,Widget B,,25.0, ,2025-08-17
+2075,2025-07-22,david lee,Wa,Widget C,5,-5.0,SUMMER20,08-09-2025
+2076,2025/07/31,BOB SMITH,OR,Widget A,4,25.0,,2025/07/28
+2077,2025-07-17,david lee,wa,Widget C,5,25.0,SUMMER20,07-18-2025
+2078,2025-08-11,frank ocean,or,Widget C,,19.99,,2025-08-12
+2079,07-19-2025,BOB SMITH,Wa,Widget A,0,15.49,,08-18-2025
+2080,07-20-2025,wanda maximoff,wa,Widget D,0,25.0,,2025/07/28
+2081,07-28-2025,  Carol Danvers ,MT,Widget C,,-5.0, ,2025-08-12
+2082,2025/07/17,david lee,id,Widget B,,25.0,SUMMER20,08-06-2025
+2083,07-27-2025,david lee,or,Widget A,0,19.99,,08-05-2025
+2084,07-29-2025,hank pym,ID,Widget D,3,49.99,SUMMER10,07-23-2025
+2085,07-23-2025,emily davis,id,Widget A,,19.99,,08-04-2025
+2086,2025-08-11,tony stark,mt,Widget B,,9.99,SUMMER20,08-04-2025
+2087,08-05-2025,wanda maximoff,id,Widget A,0,-5.0, ,2025/08/11
+2088,07-18-2025,tony stark,id,Widget A,,25.0,SUMMER10,08-10-2025
+2089,08-12-2025,emily davis,OR,Widget C,1,9.99,,08-03-2025
+2090,2025/08/08,BOB SMITH,wa,Widget B,1,25.0, ,2025-07-24
+2091,08-08-2025,david lee,OR,Widget B,5,49.99,SUMMER20,08-11-2025
+2092,2025-07-25,emily davis,OR,Widget B,,15.49,SUMMER20,08-09-2025
+2093,2025/07/24,david lee,ID,Widget A,5,49.99,SUMMER10,07-27-2025
+2094,2025/07/20,frank ocean,ID,Widget B,,19.99,SUMMER10,2025/08/04
+2005,07-15-2025,  Carol Danvers ,or,Widget B,5,19.99,,2025/07/16
+2096,08-12-2025,emily davis,OR,Widget B,,9.99, ,2025-08-03
+2097,07-23-2025,alice johnson,ID,Widget C,,9.99, ,08-12-2025
+2098,2025-08-08,wanda maximoff,Wa,Widget B,0,19.99,SUMMER20,2025/08/05
+2099,2025-07-31,  Carol Danvers ,Wa,Widget A,,-5.0,SUMMER20,2025/08/13
+2100,08-11-2025,emily davis,or,Widget C,,19.99,,07-29-2025
+2101,07-24-2025,alice johnson,Wa,Widget B,1,19.99,,08-15-2025
+2102,07-31-2025,alice johnson,or,Widget B,0,25.0,SUMMER20,07-26-2025
+2103,2025-07-21,wanda maximoff,mt,Widget C,2,49.99,SUMMER20,2025/07/21
+2104,2025-07-26,emily davis,ID,Widget B,,-5.0, ,08-17-2025
+2105,08-01-2025,  Carol Danvers ,OR,Widget A,5,25.0, ,2025-08-06
+2106,2025-08-13,hank pym,or,Widget A,0,15.49, ,07-31-2025
+2107,2025/08/03,BOB SMITH,or,Widget B,,-5.0,,2025-08-04
+2108,2025-07-30,alice johnson,wa,Widget A,,25.0, ,2025-07-28
+2109,2025/07/18,tony stark,OR,Widget C,,19.99,SUMMER10,2025-07-17
+2110,2025/08/12,emily davis,mt,Widget B,0,25.0,SUMMER10,2025/07/31
+2111,2025-07-22,hank pym,wa,Widget C,0,9.99, ,2025/07/20
+2112,07-22-2025,hank pym,ID,Widget A,0,-5.0, ,08-11-2025
+2113,2025-08-14,hank pym,MT,Widget B,5,19.99,SUMMER20,07-28-2025
+2114,07-17-2025,frank ocean,OR,Widget C,,49.99,SUMMER20,2025/08/09
+2005,2025-07-30,  Carol Danvers ,MT,Widget A,3,25.0,,2025-08-10
+2116,08-08-2025,alice johnson,OR,Widget B,0,19.99,SUMMER10,07-25-2025
+2117,2025-08-08,emily davis,mt,Widget D,0,-5.0,SUMMER10,2025-07-16
+2118,07-19-2025,hank pym,wa,Widget A,5,9.99,,2025-08-12
+2119,07-30-2025,BOB SMITH,or,Widget A,,9.99, ,07-27-2025
+2120,2025/07/20,BOB SMITH,wa,Widget D,3,-5.0, ,2025/08/18
+2121,07-31-2025,gina torres,MT,Widget D,0,-5.0,,07-19-2025
+2122,2025-07-28,hank pym,OR,Widget C,5,25.0,SUMMER10,2025-07-31
+2123,08-13-2025,BOB SMITH,id,Widget A,,19.99,SUMMER10,2025-08-14
+2124,08-08-2025,tony stark,ID,Widget D,,49.99, ,08-14-2025
+2125,2025-08-06,alice johnson,or,Widget B,0,-5.0,SUMMER20,08-18-2025
+2126,2025/08/06,  Carol Danvers ,MT,Widget A,0,-5.0,,2025/08/05
+2127,07-27-2025,  Carol Danvers ,ID,Widget C,4,15.49,,2025/08/17
+2005,2025/08/04,tony stark,or,Widget D,0,9.99, ,2025-08-13
+2129,07-29-2025,emily davis,ID,Widget A,,15.49,,2025/08/15
+2130,2025-07-29,BOB SMITH,OR,Widget A,0,49.99,SUMMER10,2025-08-01
+2131,2025-07-22,david lee,mt,Widget D,,-5.0, ,08-02-2025
+2132,2025/07/17,BOB SMITH,MT,Widget D,0,25.0,SUMMER10,08-16-2025
+2133,07-15-2025,wanda maximoff,Wa,Widget D,0,9.99,SUMMER20,2025/07/31
+2134,2025-08-01,gina torres,id,Widget A,,15.49,,2025-08-13
+2135,2025-08-02,tony stark,Wa,Widget D,1,9.99,,2025-08-03
+2136,2025-07-15,tony stark,MT,Widget D,5,15.49,SUMMER10,2025/08/02
+2137,08-06-2025,tony stark,or,Widget A,0,-5.0, ,08-05-2025
+2138,2025-07-16,david lee,MT,Widget A,3,19.99, ,2025-07-21
+2139,2025-07-17,wanda maximoff,MT,Widget C,2,19.99,,2025-07-25
+2140,2025/08/11,gina torres,OR,Widget B,0,25.0,SUMMER10,08-09-2025
+2141,07-17-2025,hank pym,wa,Widget A,0,49.99,SUMMER20,07-25-2025
+2142,2025/07/22,hank pym,id,Widget B,0,9.99,SUMMER10,2025-07-29
+2143,2025/08/05,emily davis,mt,Widget C,0,49.99, ,2025/08/11
+2144,07-21-2025,tony stark,mt,Widget C,,15.49,,08-06-2025
+2145,07-19-2025,gina torres,ID,Widget D,,-5.0,,2025/08/14
+2146,08-13-2025,emily davis,mt,Widget C,,25.0,,2025-07-19
+2147,2025/08/02,tony stark,id,Widget D,0,19.99,SUMMER20,2025/08/11
+2148,2025/07/22,tony stark,ID,Widget D,0,19.99,SUMMER20,07-17-2025
+2149,2025/08/09,alice johnson,ID,Widget A,,25.0, ,2025/08/09
+2150,2025-07-21,tony stark,or,Widget A,,9.99,SUMMER10,2025/07/16
+2151,07-18-2025,BOB SMITH,wa,Widget B,,49.99,SUMMER10,2025/08/04
+2152,2025/07/28,david lee,Wa,Widget D,,15.49,SUMMER10,08-11-2025
+2153,2025/07/28,david lee,or,Widget D,4,49.99,SUMMER20,08-19-2025
+2154,07-29-2025,emily davis,wa,Widget B,,19.99,,2025/07/30
+2155,07-16-2025,BOB SMITH,wa,Widget D,0,25.0, ,2025/07/30
+2156,08-04-2025,  Carol Danvers ,wa,Widget C,0,19.99, ,2025/08/12
+2157,2025-07-18,david lee,MT,Widget D,0,-5.0,SUMMER20,2025/07/17
+2005,07-27-2025,  Carol Danvers ,or,Widget D,,19.99,SUMMER20,08-06-2025
+2159,2025-07-25,wanda maximoff,Wa,Widget D,0,15.49,,08-10-2025
+2160,2025-07-22,BOB SMITH,OR,Widget A,0,9.99,,2025/07/26
+2161,07-21-2025,  Carol Danvers ,wa,Widget C,0,9.99,SUMMER20,07-24-2025
+2162,2025-07-29,alice johnson,Wa,Widget D,,-5.0, ,2025-08-19
+2163,2025-07-28,gina torres,OR,Widget C,4,15.49,,08-10-2025
+2164,2025/07/23,hank pym,id,Widget C,,25.0,,2025-07-17
+2165,2025-07-22,tony stark,OR,Widget C,0,49.99, ,2025-08-12
+2166,07-29-2025,hank pym,id,Widget B,,25.0,,2025-08-14
+2167,2025-07-18,emily davis,mt,Widget D,,49.99, ,2025/07/19
+2168,08-04-2025,alice johnson,OR,Widget A,,9.99,SUMMER10,2025/08/09
+2169,2025-08-10,david lee,id,Widget A,,19.99,,2025/07/29
+2005,2025-07-17,emily davis,wa,Widget A,,19.99,,2025/08/05
+2171,2025/07/20,emily davis,MT,Widget A,,-5.0,SUMMER10,2025/08/09
+2172,2025/07/30,hank pym,OR,Widget D,0,25.0, ,2025/08/11
+2173,2025/07/21,BOB SMITH,ID,Widget A,0,15.49,,2025/07/21
+2005,2025-08-12,david lee,id,Widget C,0,49.99,SUMMER10,07-17-2025
+2175,2025/07/20,emily davis,or,Widget B,0,19.99, ,2025-08-19
+2176,2025/07/15,tony stark,id,Widget A,,-5.0,,2025-08-07
+2177,2025/07/23,david lee,OR,Widget C,2,25.0,SUMMER20,07-20-2025
+2178,2025/07/24,gina torres,id,Widget A,,15.49,SUMMER10,2025-07-18
+2179,08-06-2025,BOB SMITH,Wa,Widget D,0,9.99, ,2025-07-31
+2180,08-09-2025,wanda maximoff,or,Widget C,0,15.49,SUMMER20,07-17-2025
+2181,08-05-2025,david lee,OR,Widget D,0,9.99, ,2025-07-25
+2182,2025-07-30,  Carol Danvers ,MT,Widget A,2,25.0,SUMMER20,2025/07/24
+2183,2025/07/21,emily davis,Wa,Widget C,5,15.49,SUMMER20,07-23-2025
+2184,2025-07-21,  Carol Danvers ,or,Widget C,0,-5.0,SUMMER10,2025/07/29
+2185,08-02-2025,BOB SMITH,ID,Widget C,0,25.0,SUMMER10,2025/08/01
+2186,2025-08-01,alice johnson,id,Widget A,0,9.99,SUMMER20,07-26-2025
+2187,2025/08/07,  Carol Danvers ,id,Widget B,0,-5.0,SUMMER10,2025-07-23
+2188,2025-07-16,emily davis,mt,Widget B,4,19.99, ,2025-08-04
+2189,2025/08/02,tony stark,or,Widget D,,-5.0,,2025/07/17
+2190,07-31-2025,tony stark,id,Widget B,0,19.99, ,2025/08/09
+2191,2025-07-20,emily davis,mt,Widget A,4,-5.0,SUMMER20,2025-07-28
+2192,08-14-2025,hank pym,mt,Widget C,0,9.99, ,2025-07-31
+2193,2025-07-17,BOB SMITH,OR,Widget C,5,49.99,SUMMER20,08-04-2025
+2194,07-17-2025,hank pym,id,Widget A,2,49.99, ,07-23-2025
+2195,07-17-2025,emily davis,Wa,Widget C,,19.99, ,2025/07/18
+2196,2025-08-11,gina torres,ID,Widget B,0,19.99,SUMMER10,2025/08/19
+2197,2025-07-27,emily davis,Wa,Widget D,,15.49,SUMMER20,2025-08-08
+2198,08-14-2025,wanda maximoff,Wa,Widget A,2,-5.0,SUMMER20,08-17-2025
+2199,07-22-2025,wanda maximoff,id,Widget C,0,-5.0,,2025-08-06

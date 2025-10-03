@@ -1,0 +1,11 @@
+order_id,order_date,customer_name,state,product,qty,price_usd,coupon_code,ship_date
+1001,2025/08/01,  Alice Johnson  ,mt,Widget A,2,19.99,SUMMER10,2025-08-03
+1002,2025/08/01,Bob Smith,MT,Widget B, f,15.49,,2025-08-05
+1003,08-02-2025,carol danvers,Wa,Widget A,3,19.99,SUMMER10,2025/08/04
+1004,2025-08-02,David Lee,wa,Widget C,1,-5.0,,2025-08-06
+1005,2025-08-03,Emily Davis,ID,Widget B,4,15.49,,2025-08-04
+1006,2025-08-03,Frank Ocean,mt,Widget A,0,19.99,SUMMER10,2025-08-05
+1007,2025-08-04,Gina Torres,OR,Widget C,2,25.0,SUMMER20,2025-08-07
+1008,2025-08-04,  Alice Johnson,MT,Widget A,2,19.99,SUMMER10,2025-08-05
+1008,2025-08-04,  Alice Johnson,MT,Widget A,2,19.99,SUMMER10,2025-08-05
+1009,2025/08/05,Hank Pym ,mt,Widget D,1,49.99,,2025-08-09
