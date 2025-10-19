@@ -1,8 +1,8 @@
 #-------------------------------------------------------------------------------
 # project_7_midterm_project_leo_valladares.py
-# This project analyzes Madisson data
+# This project analyze a Formula 1 dataset and generate vizualizations
 # Author: Leonardo Valladares
-# Date: 2025-10-10
+# Date: 2025-10-19
 #------------------------------------------------------------------------------
 
 # --------------------------------------
@@ -10,11 +10,12 @@
 # --------------------------------------
 import os
 import pandas as pd
-import numpy as np
-import seaborn as sns
-# import openpyxl
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
+
+
+# --------------------------------------
+# Load data
+# --------------------------------------
 
 folder_path = "formula_1/formula1-datasets/"
 
@@ -24,10 +25,13 @@ filenames = [
     "formula1_2021season_raceResults.csv",
     "formula1_2022season_raceResults.csv",
     "formula1_2023season_raceResults.csv",
-    "formula1_2024season_raceResults.csv",  # <- check this name in your folder
+    "formula1_2024season_raceResults.csv",  
     "formula1_2025season_raceResults.csv"
 ]
 
+# --------------------------------------
+# Exploring and cleaning the dataset
+# --------------------------------------
 
 dfs = {}
 for fname in filenames:
@@ -50,6 +54,15 @@ for year in ["formula1_2019season_raceResults.csv", "formula1_2020season_raceRes
             'Fastest Lap': 'Fastest Lap Time'
         })
         print(f"Renamed columns in {year}")
+
+# Rename columns in 2021 and 2022 dataframes
+for year in ["formula1_2021season_raceResults.csv", "formula1_2022season_raceResults.csv"]:
+    if year in dfs:
+        dfs[year] = dfs[year].rename(columns={
+            'Fastest Lap': 'Fastest Lap Time'
+        })
+        print(f"Renamed columns in {year}")
+
 
 # Define the columns to keep
 columns_to_keep = [
@@ -130,11 +143,14 @@ print(combined_df['team_common_name'].value_counts())
 # combined_df.to_excel(output_file, index=False, sheet_name='Race Results')
 # print(f"\nExcel file saved to: {output_file}")
 
-#### First plot
+# --------------------------------------
+# Creating visualizations 
+# --------------------------------------
+
+### Team Wins by Season (2019–2025)
 
 # # Convert Position and Season to numeric
 combined_df['Position'] = pd.to_numeric(combined_df['Position'], errors='coerce')
-# combined_df['Season'] = pd.to_numeric(combined_df['Season'], errors='coerce')
 
 # Filter for Position = 1
 first_position = combined_df[combined_df['Position'] == 1].copy()
@@ -157,22 +173,44 @@ team_wins_filtered = team_wins_filtered.sort_values(['Season', 'team_common_name
 # get sorted list of seasons for ticks
 seasons = sorted(team_wins_filtered['Season'].unique())
 
+# Define F1 team colors
+team_colors = {
+    'Ferrari': '#DC0000',           # Ferrari Red
+    'Mercedes': '#00D2BE',          # Mercedes Teal
+    'Red Bull Racing': '#0600EF',  # Red Bull Blue
+    'McLaren': '#FF8700',          # McLaren Orange
+    'Aston Martin': '#006F62',     # Aston Martin Green
+    'Alpine': '#0090FF',           # Alpine Blue
+    'AlphaTauri': '#2B4562',       # AlphaTauri Navy
+    'Alfa Romeo': '#900000',       # Alfa Romeo Burgundy
+    'Haas': '#FFFFFF',             # Haas White (will use gray for visibility)
+    'Williams': '#005AFF',         # Williams Blue
+    'Racing Point': '#F596C8',     # Racing Point Pink
+    'Renault': '#FFF500',          # Renault Yellow
+    'Toro Rosso': '#469BFF'        # Toro Rosso Blue
+}
+
 # Create the line chart
 fig = go.Figure()
 
 for team in sorted(team_wins_filtered['team_common_name'].unique()):
     team_data = team_wins_filtered[team_wins_filtered['team_common_name'] == team].sort_values('Season')
+    
+    # Get team color, default to gray if not found
+    color = team_colors.get(team, '#808080')
+    
+    
     fig.add_trace(go.Scatter(
         x=team_data['Season'],
         y=team_data['wins'],
         mode='lines+markers',
         name=team,
-        line=dict(width=2),
-        marker=dict(size=8)
+        line=dict(width=3, color=color),
+        marker=dict(size=5, color=color)
     ))
 
 fig.update_layout(
-    title='First Place Finishes by Team and Season',
+    title='Team Wins by Season (2019–2025)',
     xaxis_title='Season',
     yaxis_title='Count of First Positions',
     xaxis=dict(
@@ -181,9 +219,129 @@ fig.update_layout(
         tickvals=seasons,
         ticktext=[str(s) for s in seasons]   # optional: display as strings
     ),
+    hovermode='closest',
+    legend_title='Team',
     template='plotly_white',
-    width=1200, height=600
+    width=1200,
+    height=600,
+    # xaxis=dict(type='category')
 )
 
 fig.show()
 
+### Drivers Points by Season (Mercedes & Red Bull Racing) Chart
+
+# Filter for Mercedes and Red Bull Racing
+top_teams = combined_df[combined_df['team_common_name'].isin(['Mercedes', 'Red Bull Racing'])].copy()
+
+# Calculate total points by driver
+driver_total_points = top_teams.groupby('Driver')['Points'].sum().sort_values(ascending=False)
+
+# Get top 4 drivers
+top_4_drivers = driver_total_points.head(4).index.tolist()
+
+# Filter data for top 4 drivers
+top_drivers_data = top_teams[top_teams['Driver'].isin(top_4_drivers)].copy()
+
+# Group by Season and Driver, sum the points
+driver_season_points = top_drivers_data.groupby(['Season', 'Driver'])['Points'].sum().reset_index()
+
+# Sort by Season
+driver_season_points = driver_season_points.sort_values('Season')
+
+# Define driver colors (variations of team colors)
+driver_colors = {
+    'Lewis Hamilton': '#00A19C',      # Mercedes Teal (darker)
+    'George Russell': '#70F4E8',      # Mercedes Teal (lighter)
+    'Max Verstappen': '#1E41FF',      # Red Bull Blue (brighter)
+    'Sergio Perez': '#0A0080'         # Red Bull Blue (darker)
+}
+
+# Create the line chart
+fig = go.Figure()
+
+for driver in top_4_drivers:
+    driver_data = driver_season_points[driver_season_points['Driver'] == driver].sort_values('Season')
+    
+    # Get driver color, default to gray if not found
+    color = driver_colors.get(driver, '#808080')
+    
+    fig.add_trace(go.Scatter(
+        x=driver_data['Season'],
+        y=driver_data['Points'],
+        mode='lines+markers',
+        name=driver,
+        line=dict(width=3, color=color),
+        marker=dict(size=5, color=color)
+    ))
+
+fig.update_layout(
+    title='Top Drivers Points by Season (Mercedes & Red Bull Racing)',
+    xaxis_title='Season',
+    yaxis_title='Sum of Points',
+    hovermode='closest',
+    legend_title='Driver',
+    template='plotly_white',
+    width=1200,
+    height=600,
+    xaxis=dict(type='category')
+)
+
+fig.show()
+
+### Races with No Points (Consistency of Top Drivers - Mercedes & Red Bull Racing)
+
+# Filter for Mercedes and Red Bull Racing, and Points = 0
+zero_points_data = combined_df[
+    (combined_df['team_common_name'].isin(['Mercedes', 'Red Bull Racing'])) & 
+    (combined_df['Points'] == 0)
+].copy()
+
+# Filter for top 4 drivers (using the same drivers from previous chart)
+zero_points_top4 = zero_points_data[zero_points_data['Driver'].isin(top_4_drivers)].copy()
+
+# Convert Season to numeric to ensure proper sorting
+zero_points_top4['Season'] = pd.to_numeric(zero_points_top4['Season'], errors='coerce')
+
+# Count occurrences by Season and Driver
+driver_zero_points_count = zero_points_top4.groupby(['Season', 'Driver']).size().reset_index(name='count')
+
+# Sort by Season
+driver_zero_points_count = driver_zero_points_count.sort_values('Season')
+
+# Create the line chart
+fig = go.Figure()
+
+for driver in top_4_drivers:
+    driver_data = driver_zero_points_count[driver_zero_points_count['Driver'] == driver].sort_values('Season')
+    
+    # Get driver color (same as previous chart)
+    color = driver_colors.get(driver, '#808080')
+    
+    fig.add_trace(go.Scatter(
+        x=driver_data['Season'],
+        y=driver_data['count'],
+        mode='lines+markers',
+        name=driver,
+        line=dict(width=3, color=color),
+        marker=dict(size=5, color=color)
+    ))
+
+fig.update_layout(
+    title='Races with No Points (Consistency of Top Drivers - Mercedes & Red Bull Racing)',
+    xaxis_title='Season',
+    yaxis_title='Count of Driver',
+    hovermode='closest',
+    legend_title='Driver',
+    template='plotly_white',
+    width=1200,
+    height=600,
+    xaxis=dict(
+        type='linear',
+        tickmode='linear',
+        tick0=2019,
+        dtick=1
+    )
+)
+
+fig.show()

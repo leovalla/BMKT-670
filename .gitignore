@@ -2,3 +2,6 @@
 *.png
 *.txt
 *.txt
+*.xlsx
+*.json
+/formula_1
