@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# project_5_madison_project_leo_valladares.py
+# project_6_madison_project_leo_valladares.py
 # This project analyzes Madisson data
 # Author: Leonardo Valladares
 # Date: 2025-10-10
