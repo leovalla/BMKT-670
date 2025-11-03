@@ -12,7 +12,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import statsmodels.formula.api as smf
-from statsmodels.iolib.summary2 import summary_col
 from sklearn.linear_model import LinearRegression
 
 # --------------------------------------
@@ -64,24 +63,24 @@ print(res4.summary())
 # 1.7 --- Create the regression plot ---
 # Scatter plot of actual data
 plt.figure(figsize=(8,6))
-plt.scatter(df['OFF_EFF'], df['PTS'], label='Observed data')
+plt.scatter(df['FG_PCT'], df['PTS'], label='Observed data')
 
 # Predicted (fitted) line
-pred_df = pd.DataFrame({'OFF_EFF': sorted(df['OFF_EFF'])})
-pred_df['predicted_PTS'] = res3.predict(pred_df)
+pred_df = pd.DataFrame({'FG_PCT': sorted(df['FG_PCT'])})
+pred_df['predicted_PTS'] = res1.predict(pred_df)
 
-plt.plot(pred_df['OFF_EFF'], pred_df['predicted_PTS'],
+plt.plot(pred_df['FG_PCT'], pred_df['predicted_PTS'],
          color='red', linewidth=2, label='Regression line')
 
 # Labels and title
-plt.xlabel('OFF_EFF')
+plt.xlabel('Field Goal Percentage (FG%)')
 plt.ylabel('Points')
-plt.title('Regression: Points vs OFF_EFF')
+plt.title('Regression: Points vs FG%')
 plt.legend()
 plt.tight_layout()
-# plt.show()
+#plt.show()
 
-"""
+
 # --------------------------------------
 # Part 2
 # --------------------------------------
@@ -102,10 +101,10 @@ df_sc = df_sc[pd.to_numeric(df_sc['PTS'], errors='coerce').notna() &
 numeric_cols = ['FGA', 'PTS']
 df_sc[numeric_cols] = df_sc[numeric_cols].apply(pd.to_numeric, errors='coerce')
 
-# # 2.1 Regression models PTS = a + b*(FGA)
-mod4 = smf.ols('PTS ~ FGA', data=df_sc)
-res4 = mod4.fit()
-print(res4.summary())
+# 2.1 Regression models PTS = a + b*(FGA)
+mod5 = smf.ols('PTS ~ FGA', data=df_sc)
+res5 = mod5.fit()
+print(res5.summary())
 
 # --- Create the regression plot ---
 # Scatter plot of actual data
@@ -114,7 +113,7 @@ plt.scatter(df_sc['FGA'], df_sc['PTS'], label='Observed data')
 
 # Predicted (fitted) line
 pred_df_sc = pd.DataFrame({'FGA': sorted(df_sc['FGA'])})
-pred_df_sc['predicted_PTS'] = res4.predict(pred_df_sc)
+pred_df_sc['predicted_PTS'] = res5.predict(pred_df_sc)
 
 plt.plot(pred_df_sc['FGA'], pred_df_sc['predicted_PTS'],
          color='red', linewidth=2, label='Regression line')
@@ -126,4 +125,3 @@ plt.title('Regression: Sthephen Curry Points vs FGA')
 plt.legend()
 plt.tight_layout()
 plt.show()
-"""
