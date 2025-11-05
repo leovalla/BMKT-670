@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
 # project_09_heart_disease_part_1_lv.py
-# This project analyze a heart disease dataset and generate visualizations
+# This project analyze a heart disease dataset and generate a pair plot 
 # Author: Leonardo Valladares
 # Date: 2025-11-04
 #------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ print(df.shape)
 print()
 
 # --------------------------------------
-# pair plot
+# Pair plot
 # --------------------------------------
 
 sns.set_style("darkgrid")

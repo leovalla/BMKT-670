@@ -32,49 +32,49 @@ prob_noclick = df_result_training.loc[df_result_training["Label_GT"] == 0, "Labe
 
 fig, axes = plt.subplots(2, 2, figsize=(15, 12))
 
-# sns.kdeplot(x=prob_click.values, ax=axes[0, 0], label="Click")
-# sns.kdeplot(x=prob_noclick.values, ax=axes[0, 0], label="No click")
-# axes[0, 0].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
-# xx = axes[0, 0].get_lines()[0].get_data()
-# shade = xx[0][xx[0] >= 0.5]
-# kde = xx[1][xx[0] >= 0.5]
-# axes[0, 0].fill_between(shade, kde, alpha=0.3, color="royalblue", label="TP")
-# axes[0, 0].legend(loc="upper left")
-# axes[0, 0].set_xlabel("$p$")
-# axes[0, 0].set_ylabel("Density")
+sns.kdeplot(x=prob_click.values, ax=axes[0, 0], label="Click")
+sns.kdeplot(x=prob_noclick.values, ax=axes[0, 0], label="No click")
+axes[0, 0].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
+xx = axes[0, 0].get_lines()[0].get_data()
+shade = xx[0][xx[0] >= 0.5]
+kde = xx[1][xx[0] >= 0.5]
+axes[0, 0].fill_between(shade, kde, alpha=0.3, color="royalblue", label="TP")
+axes[0, 0].legend(loc="upper left")
+axes[0, 0].set_xlabel("$p$")
+axes[0, 0].set_ylabel("Density")
 
-# sns.kdeplot(x=prob_click.values, ax=axes[0, 1], label="Click")
-# sns.kdeplot(x=prob_noclick.values, ax=axes[0, 1], label="No click")
-# axes[0, 1].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
-# xx = axes[0, 1].get_lines()[1].get_data()
-# shade = xx[0][xx[0] <= 0.5]
-# kde = xx[1][xx[0] <= 0.5]
-# axes[0, 1].fill_between(shade, kde, alpha=0.3, color="orange", label="TN")
-# axes[0, 1].legend(loc="upper left")
-# axes[0, 1].set_xlabel("$p$")
-# axes[0, 1].set_ylabel("Density")
+sns.kdeplot(x=prob_click.values, ax=axes[0, 1], label="Click")
+sns.kdeplot(x=prob_noclick.values, ax=axes[0, 1], label="No click")
+axes[0, 1].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
+xx = axes[0, 1].get_lines()[1].get_data()
+shade = xx[0][xx[0] <= 0.5]
+kde = xx[1][xx[0] <= 0.5]
+axes[0, 1].fill_between(shade, kde, alpha=0.3, color="orange", label="TN")
+axes[0, 1].legend(loc="upper left")
+axes[0, 1].set_xlabel("$p$")
+axes[0, 1].set_ylabel("Density")
 
-# sns.kdeplot(x=prob_click.values, ax=axes[1, 0], label="Click")
-# sns.kdeplot(x=prob_noclick.values, ax=axes[1, 0], label="No click")
-# axes[1, 0].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
-# xx = axes[1, 0].get_lines()[0].get_data()
-# shade = xx[0][xx[0] < 0.5]
-# kde = xx[1][xx[0] < 0.5]
-# axes[1, 0].fill_between(shade, kde, alpha=0.3, color="royalblue", label="FN")
-# axes[1, 0].legend(loc="upper left")
-# axes[1, 0].set_xlabel("$p$")
-# axes[1, 0].set_ylabel("Density")
+sns.kdeplot(x=prob_click.values, ax=axes[1, 0], label="Click")
+sns.kdeplot(x=prob_noclick.values, ax=axes[1, 0], label="No click")
+axes[1, 0].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
+xx = axes[1, 0].get_lines()[0].get_data()
+shade = xx[0][xx[0] < 0.5]
+kde = xx[1][xx[0] < 0.5]
+axes[1, 0].fill_between(shade, kde, alpha=0.3, color="royalblue", label="FN")
+axes[1, 0].legend(loc="upper left")
+axes[1, 0].set_xlabel("$p$")
+axes[1, 0].set_ylabel("Density")
 
-# sns.kdeplot(x=prob_click.values, ax=axes[1, 1], label="Click")
-# sns.kdeplot(x=prob_noclick.values, ax=axes[1, 1], label="No click")
-# axes[1, 1].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
-# xx = axes[1, 1].get_lines()[1].get_data()
-# shade = xx[0][xx[0] >= 0.5]
-# kde = xx[1][xx[0] >= 0.5]
-# axes[1, 1].fill_between(shade, kde, alpha=0.3, color="orange", label="FP")
-# axes[1, 1].legend(loc="upper left")
-# axes[1, 1].set_xlabel("$p$")
-# axes[1, 1].set_ylabel("Density")
+sns.kdeplot(x=prob_click.values, ax=axes[1, 1], label="Click")
+sns.kdeplot(x=prob_noclick.values, ax=axes[1, 1], label="No click")
+axes[1, 1].axvline(x=0.5, ymin=0, ymax=4, color="r", label="Threshold")
+xx = axes[1, 1].get_lines()[1].get_data()
+shade = xx[0][xx[0] >= 0.5]
+kde = xx[1][xx[0] >= 0.5]
+axes[1, 1].fill_between(shade, kde, alpha=0.3, color="orange", label="FP")
+axes[1, 1].legend(loc="upper left")
+axes[1, 1].set_xlabel("$p$")
+axes[1, 1].set_ylabel("Density")
 
 plt.show()
 

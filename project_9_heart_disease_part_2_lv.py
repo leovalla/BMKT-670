@@ -1,6 +1,7 @@
 #-------------------------------------------------------------------------------
 # project_09_heart_disease_part_1_lv.py
-# This project analyze a heart disease dataset and generate visualizations
+# This project create logistic models for a heart disease dataset and generate 
+# visualizations
 # Author: Leonardo Valladares
 # Date: 2025-11-04
 #------------------------------------------------------------------------------
@@ -53,7 +54,7 @@ y_pred_test = clf.predict(x_test)
 # Create dataframe with training set results
 df_result_training = pd.DataFrame([y_train, y_prob_train, y_pred_train])
 df_result_training = df_result_training.T  # transpose to get correct shape
-df_result_training.columns = ["Ground_Truth", "Predicted_Probability_of_Heart_Disease", "Predicted_Label"] # I do not like to leave spaced on column names
+df_result_training.columns = ["Ground_Truth", "Predicted_Probability_of_Heart_Disease", "Predicted_Label"] # I do not like to leave spaces on column names
 print(df_result_training.head())
 
 # Create dataframe with test set results
